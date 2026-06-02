@@ -1,36 +1,91 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Tripen Tekstil — Corporate Website
 
-## Getting Started
+Official corporate website for **Tripen Tekstil Model San. Tic. Ltd. Şti.**, a wholesale women's clothing manufacturer based in Istanbul, Turkey. Founded in 1996, Tripen designs and produces its own collections for domestic and international wholesale.
 
-First, run the development server:
+**Live:** https://tripen.com.tr &nbsp;·&nbsp; **GitHub:** https://github.com/huseyinky40/tripen
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+---
+
+## Tech Stack
+
+| Layer | Technology |
+|-------|-----------|
+| Framework | Next.js 16 (App Router) + React 19 |
+| Language | TypeScript |
+| Styling | Tailwind CSS v4 (CSS-first `@theme`) |
+| Fonts | Fraunces (serif) + Hanken Grotesk — self-hosted via `next/font` |
+| Testing | Playwright (smoke / e2e) |
+| Deployment | Vercel |
+
+No backend, no database — fully static/SSG.
+
+---
+
+## Pages
+
+| Route | Description |
+|-------|-------------|
+| `/` | Home — hero, about snippet, collections preview, CTA |
+| `/hakkimizda` | About — company history, values |
+| `/koleksiyonlar` | Collections |
+| `/uretim-tasarim` | Production & design process |
+| `/kalite` | Quality standards |
+| `/fabrika` | Factory location + Google Maps |
+| `/showroom` | Showroom location + Google Maps |
+| `/galeri` | Photo gallery |
+| `/toptan-satis` | Wholesale info |
+| `/iletisim` | Contact — WhatsApp redirect (no backend) |
+| `/sss` | FAQ |
+| `/kvkk` | KVKK (Turkish data protection) |
+| `/gizlilik` | Privacy policy |
+| `/cerez-politikasi` | Cookie policy |
+
+---
+
+## Project Structure
+
+```
+src/
+├── app/            # Routes (15 pages), sitemap.ts, robots.ts, icon.svg, opengraph-image.tsx
+├── components/
+│   ├── layout/     # Header (sticky + mobile drawer), Footer, SkipLink
+│   ├── ui/         # Container, Section, Eyebrow, Button, Reveal, icons
+│   ├── brand/      # Logo, Monogram, FabricTexture, Placeholder
+│   ├── sections/   # PageHeader, CTASection, ProcessSteps, LocationCard, FAQAccordion, LegalPage
+│   ├── maps/       # MapFrame — keyless interactive Google Maps embed
+│   └── contact/    # ContactForm — client-side validation, WhatsApp fallback
+├── content/        # Single source of truth: site.ts, data.ts
+├── i18n/           # Locale system (TR/EN/RU ready)
+└── lib/            # seo.ts, jsonld.tsx (Organization/LocalBusiness), utils.ts
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Commands
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run dev          # Development server
+npm run build        # Production build
+npm run start        # Production server
+npm run lint         # ESLint
+npm run typecheck    # tsc --noEmit
+npx playwright test  # Smoke tests (Chromium + WebKit)
+```
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## Content Management
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+All company data (address, phone, WhatsApp, locations, social links) lives in a **single source of truth**: [`src/content/site.ts`](src/content/site.ts). Page copy is in `src/i18n/messages/tr.ts`. The i18n system is ready for English and Russian expansion.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## Brand System
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Derived from the Tripen logo: anthracite `#1A1A1A`, off-white `#F7F4EF`, warm sand/taupe accent `#C8A97E`. Design tokens live in the `@theme` block inside [`src/app/globals.css`](src/app/globals.css).
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## SEO
+
+Page-specific metadata + Open Graph, JSON-LD (`Organization`, `LocalBusiness`, `FAQPage`), `sitemap.xml`, `robots.txt`, dynamic OG image, semantic HTML.
