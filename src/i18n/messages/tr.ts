@@ -539,4 +539,14 @@ export const tr = {
       ],
     },
   },
+
+  appBanner: [
+    "Tripen Mobil Uygulama",
+    "Koleksiyonlar Cebinizde",
+    "App Store'da",
+    "Google Play'de",
+    "Hızlı Sipariş",
+    "Yeni Sezon Anlık Bildirim",
+    "Ücretsiz İndir",
+  ],
 };

@@ -437,4 +437,14 @@ export const en: Messages = {
       ],
     },
   },
+
+  appBanner: [
+    "Tripen Mobile App",
+    "Collections in Your Pocket",
+    "On the App Store",
+    "On Google Play",
+    "Quick Order",
+    "New Season Instant Alerts",
+    "Free Download",
+  ],
 };
