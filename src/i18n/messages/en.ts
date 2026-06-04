@@ -375,7 +375,7 @@ export const en: Messages = {
       { q: "Do you sell abroad?", a: "Yes, we carry out international wholesale sales. Get in touch for your export requests." },
       { q: "Are the products your own design?", a: "Yes. Our products are our own designs; we run the process from model to manufacturing ourselves." },
       { q: "Where is your production (factory) address?", a: "Our production facility is in Sultangazi/Istanbul: Sultançiftliği Mah., 2316. Sk. No: 12, 34265." },
-      { q: "Where is your store / showroom?", a: "Our store is in Merter, Güngören/Istanbul: Mehmet Nesih Özmen Mah., Merter Sok. No: 3 B, 34173." },
+      { q: "Where is your store / showroom?", a: "Our store is in Merter, Güngören/Istanbul: Mehmet Nesih Özmen Mah., Fidan Sok. No: 3/B, 34173." },
       { q: "How can I contact you?", a: "Our phone and WhatsApp line: 0536 350 64 54. You can also reach us using the form on our Contact page." },
       { q: "Do you have a minimum order quantity?", a: "Order quantity and conditions may vary by product group. For current information, please contact us by phone or WhatsApp." },
       { q: "Which product categories do you work in?", a: "We mainly produce women's tops, outerwear, dresses and coordinated sets. Get in touch for the product group you're looking for." },
@@ -447,4 +447,11 @@ export const en: Messages = {
     "New Season Instant Alerts",
     "Free Download",
   ],
+
+  instagramFeed: {
+    eyebrow: "Instagram",
+    heading: "Live collection feed",
+    lead: "Be the first to discover new arrivals.",
+    cta: "Follow Us",
+  },
 };

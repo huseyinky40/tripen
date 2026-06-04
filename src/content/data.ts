@@ -5,7 +5,7 @@ export type Ratio = "portrait" | "square" | "landscape" | "tall";
 
 /** Koleksiyon kartlarının görsel + ton verisi (messages.collections.items ile sıralı eşleşir). */
 export const collectionData: { image?: string; tone: Tone }[] = [
-  { image: "/instagram/ig-02.jpg", tone: "ink" },
+  { image: "/instagram/ig-takim.jpg", tone: "ink" },
   { image: "/instagram/ig-03.jpg", tone: "paper" },
   { image: "/instagram/ig-01.jpg", tone: "sand" },
   { image: "/instagram/ig-04.jpg", tone: "paper" },

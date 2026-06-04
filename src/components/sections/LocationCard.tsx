@@ -65,7 +65,7 @@ export async function LocationCard({ location, className }: LocationCardProps) {
       </div>
 
       <a
-        href={mapDirectionsUrl(location.mapsQuery)}
+        href={location.mapsUrl ?? mapDirectionsUrl(location.mapsQuery)}
         target="_blank"
         rel="noopener noreferrer"
         className="link-underline mt-5 inline-flex w-fit items-center gap-1.5 text-sm text-ink/70 transition-colors hover:text-ink"

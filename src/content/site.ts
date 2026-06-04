@@ -20,6 +20,8 @@ export interface Location {
   postalCode: string;
   /** Google Maps arama sorgusu (keyless embed + yol tarifi için) */
   mapsQuery: string;
+  /** Doğrudan Google Maps yer bağlantısı (varsa arama yerine bunu kullanırız). */
+  mapsUrl?: string;
   /** Rota / slug */
   slug: string;
 }
@@ -69,15 +71,18 @@ export const site = {
       city: "İstanbul",
       postalCode: "34265",
       mapsQuery: "Sultançiftliği, 2316. Sk. No:12, 34265 Sultangazi/İstanbul",
+      mapsUrl: "https://maps.app.goo.gl/B1z2V7ARKuTye1Dw6?g_st=ic",
       slug: "/fabrika",
     },
     {
       kind: "showroom",
-      addressLines: ["Mehmet Nesih Özmen Mah.", "Fidan / Merter Sok. No: 3 B"],
+      addressLines: ["Mehmet Nesih Özmen Mah.", "Fidan Sok. No: 3/B"],
       district: "Güngören",
       city: "İstanbul",
       postalCode: "34173",
-      mapsQuery: "Mehmet Nesih Özmen Mahallesi, Merter Sok. No:3 B, 34173 Güngören/İstanbul",
+      mapsQuery:
+        "Tripen Model Tekstil, Mehmet Nesih Özmen Mahallesi Fidan Sokak, Merter Sok. No: 3 B, 34173 Güngören/İstanbul",
+      mapsUrl: "https://maps.app.goo.gl/kjKDKmyZDZnSJwnP7?g_st=ic",
       slug: "/showroom",
     },
   ] as Location[],

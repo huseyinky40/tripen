@@ -373,7 +373,7 @@ export const tr = {
       { q: "Yurtdışına satış yapıyor musunuz?", a: "Evet, yurtdışı toptan satış gerçekleştiriyoruz. İhracat talepleriniz için bizimle iletişime geçebilirsiniz." },
       { q: "Ürünler kendi tasarımınız mı?", a: "Evet. Ürünlerimiz kendi tasarımlarımızdır; modelden imalata kadar süreci kendimiz yürütürüz." },
       { q: "Üretim (fabrika) adresiniz nerede?", a: "Üretim tesisimiz Sultangazi/İstanbul adresindedir: Sultançiftliği Mah., 2316. Sk. No: 12, 34265." },
-      { q: "Satış mağazanız / showroom nerede?", a: "Satış mağazamız Merter’de, Güngören/İstanbul adresindedir: Mehmet Nesih Özmen Mah., Merter Sok. No: 3 B, 34173." },
+      { q: "Satış mağazanız / showroom nerede?", a: "Satış mağazamız Merter’de, Güngören/İstanbul adresindedir: Mehmet Nesih Özmen Mah., Fidan Sok. No: 3/B, 34173." },
       { q: "Sizinle nasıl iletişime geçebilirim?", a: "Telefon ve WhatsApp hattımız: 0536 350 64 54. Ayrıca İletişim sayfamızdaki formu kullanarak da bize ulaşabilirsiniz." },
       { q: "Minimum sipariş adediniz var mı?", a: "Sipariş adedi ve koşullarımız ürün grubuna göre değişebilir. Güncel bilgi için lütfen telefon veya WhatsApp ile bizimle iletişime geçin." },
       { q: "Hangi ürün kategorilerinde çalışıyorsunuz?", a: "Ağırlıklı olarak kadın üst giyim, dış giyim, elbise ve takım grubunda üretim yapıyoruz. Aradığınız ürün grubu için bizimle iletişime geçebilirsiniz." },
@@ -549,4 +549,11 @@ export const tr = {
     "Yeni Sezon Anlık Bildirim",
     "Ücretsiz İndir",
   ],
+
+  instagramFeed: {
+    eyebrow: "Instagram",
+    heading: "Canlı koleksiyon akışı",
+    lead: "Yeni koleksiyonları ilk keşfeden siz olun.",
+    cta: "Takip Et",
+  },
 };
