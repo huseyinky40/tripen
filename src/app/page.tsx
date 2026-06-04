@@ -1,3 +1,4 @@
+import { AppBanner } from "@/components/sections/AppBanner";
 import { CollectionCard } from "@/components/sections/CollectionCard";
 import { CTASection } from "@/components/sections/CTASection";
 import { LocationCard } from "@/components/sections/LocationCard";
@@ -103,6 +104,9 @@ export default async function HomePage() {
           </div>
         </Container>
       </Section>
+
+      {/* Mobil uygulama banner */}
+      <AppBanner />
 
       {/* Üretim süreci özeti */}
       <Section className="border-t border-hairline">

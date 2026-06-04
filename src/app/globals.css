@@ -200,3 +200,9 @@
   color: var(--color-ink);
   font-weight: 600;
 }
+
+/* App banner marquee */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-33.333%); }
+}
